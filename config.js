@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.dest = 'www';
   
   // Inject cordova script into html
-  config.cordova = true;
+  config.cordova = false;
   
   // Images minification
   config.minify_images = true;
@@ -18,10 +18,11 @@ module.exports = function(config) {
 
   // Weinre Remote debug server
   // Setting to false will disable it
-  config.weinre = {
+  config.weinre = false;
+        /*{
            httpPort:     8001,
            boundHost:    'localhost'
-         };
+         };*/
   
   // 3rd party components
   // config.vendor.js.push('.bower_components/lib/dist/lib.js');
