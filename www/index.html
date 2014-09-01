@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Appster">
   <head>
     <meta charset="utf-8" />
-    <title>Appster</title>
+    <title ng-bind="viewTitle + ' | Appster'">Appster</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,7 +13,7 @@
     
     <script src="js/app.min.js"></script>
   </head>
-  <body ng-app="Appster" ng-controller="MainController">
+  <body ng-controller="MainController">
 
     <!-- Sidebars -->
     <div ng-include="'sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
@@ -23,8 +23,8 @@
       <!-- Navbars -->
 
       <div class="navbar navbar-app navbar-absolute-top">
-        <div class="navbar-brand navbar-brand-center" yield-to="title">
-          <span>Appster</span>
+        <div class="navbar-brand navbar-brand-center">
+          <span>{{viewTitle}}</span>
         </div>
         <div class="btn-group pull-left">
           <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">

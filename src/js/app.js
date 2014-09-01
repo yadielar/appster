@@ -4,7 +4,12 @@ angular.module('Appster', [
   'mobile-angular-ui',
   'Appster.controllers.Main'
 ])
-
-.config(function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'home.html'});
-});
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {templateUrl: 'home.html', title: 'Apps de la Semana'});
+}])
+.run(['$rootScope', function($rootScope) {
+	$rootScope.$on("$routeChangeSuccess", function(event, currentRoute, previousRoute){
+		//Change page title, based on Route information
+		$rootScope.viewTitle = currentRoute.title;
+	});
+}]);

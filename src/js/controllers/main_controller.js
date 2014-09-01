@@ -1,5 +1,5 @@
 angular.module('Appster.controllers.Main', [])
 
-.controller('MainController', function($scope){
+.controller('MainController', ['$scope', function($scope){
   
-});
+}]);
