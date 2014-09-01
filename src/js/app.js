@@ -31,7 +31,7 @@ angular.module('Appster', [
 			controller: 'AppListController'
 		})
 		.state('appsweek.detail', {
-			url: "/{appId:[0-9]{0,5}}",
+			url: "/{appId:[0-9]*}",
 			templateUrl: "appsweek.detail.html",
 			controller: 'AppDetailController'
 		});
