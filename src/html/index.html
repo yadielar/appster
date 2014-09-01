@@ -13,7 +13,7 @@
     <!-- inject:js -->
     <script src="js/app.min.js"></script>
   </head>
-  <body ng-controller="MainController">
+  <body>
 
     <!-- Sidebars -->
     <div ng-include="'sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
@@ -21,7 +21,6 @@
     <div class="app">
 
       <!-- Navbars -->
-
       <div class="navbar navbar-app navbar-absolute-top">
         <div class="navbar-brand navbar-brand-center">
           <span>{{viewTitle}}</span>
@@ -42,7 +41,7 @@
       
       <!-- App Body -->
       <div class="app-body">
-        <ng-view class="app-content"></ng-view>
+        <div ui-view class="app-content"></div>
       </div>
     </div><!-- ~ .app -->
   </body>
