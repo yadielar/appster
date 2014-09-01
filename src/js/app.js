@@ -20,25 +20,33 @@ angular.module('Appster', [
 				query:  function($http){
 					return $http({method: 'GET', url: '/data/playmarketdata.json'});
 				}
-			},
-			data: {
-				title: 'Apps de la Semana'
 			}
 		})
 		.state('appsweek.list', {
 			url: "/",
 			templateUrl: "appsweek.list.html",
-			controller: 'AppListController'
+			controller: 'AppListController',
+			data: {
+				title: 'Apps de la Semana',
+				child: false
+			}
 		})
 		.state('appsweek.detail', {
 			url: "/{appId:[0-9]*}",
 			templateUrl: "appsweek.detail.html",
-			controller: 'AppDetailController'
+			controller: 'AppDetailController',
+			data: {
+				title: 'Detalles',
+				child: true
+			}
 		});
 }])
 .run(['$rootScope', function($rootScope) {
 	$rootScope.$on("$stateChangeSuccess", function(event, toState, toParams, fromState, fromParams){
-		//Change page title, based on Route information
+
 		$rootScope.viewTitle = toState.data.title;
+		$rootScope.isChildState = (toState.data.child) ? true : false;
+
+		console.log("State changed to: "+toState.name);
 	});
 }]);
