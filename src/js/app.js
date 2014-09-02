@@ -2,6 +2,7 @@ angular.module('Appster', [
 	'ui.router',
 	'ngTouch',
 	'mobile-angular-ui',
+	'Appster.filters.AppsWeek',
 	'Appster.controllers.Main',
 	'Appster.controllers.AppsWeek'
 ])
@@ -47,6 +48,5 @@ angular.module('Appster', [
 		$rootScope.viewTitle = toState.data.title;
 		$rootScope.isChildState = (toState.data.child) ? true : false;
 
-		console.log("State changed to: "+toState.name);
 	});
 }]);
