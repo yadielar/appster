@@ -2,6 +2,7 @@ angular.module('Appster', [
 	'ui.router',
 	'ngTouch',
 	'mobile-angular-ui',
+	'Appster.directives.AppsWeek',
 	'Appster.services.Main',
 	'Appster.filters.AppsWeek',
 	'Appster.controllers.Main',

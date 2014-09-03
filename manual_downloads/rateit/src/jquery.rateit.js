@@ -336,4 +336,4 @@
     //invoke it on all .rateit elements. This could be removed if not wanted.
     $(function () { $('div.rateit, span.rateit').rateit(); });
 
-})(jQuery);
+})(j);

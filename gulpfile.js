@@ -14,7 +14,8 @@ var config = {
       './bower_components/angular/angular.js',
       './bower_components/angular-ui-router/release/angular-ui-router.js',
       './bower_components/angular-touch/angular-touch.js',
-      './bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js'
+      './bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js',
+      './manual_downloads/rateit/src/jquery.rateit.js'
     ],
 
     fonts: [

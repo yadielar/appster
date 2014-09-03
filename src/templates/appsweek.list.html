@@ -8,7 +8,10 @@
 					<div class="a-info">
 						<h1 class="a-name">{{app.title}}</h1>
 						<p class="a-desc">{{app.description | truncate:true:108}}</p>
-						<div class="a-rating">Rating: {{app.rating | toFixed}} ({{app.number_ratings}})</div>
+						<div class="a-rating">
+							<span rateit="{{app.rating}}"></span>
+							<span class="a-rating-num"> ({{app.number_ratings}})</span>
+						</div>
 						<div class="a-price">{{app.price_numeric | renderPrice}}</div>
 					</div>
 				</a>
