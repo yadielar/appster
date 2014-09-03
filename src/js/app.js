@@ -41,7 +41,8 @@ angular.module('Appster', [
 			controller: 'AppDetailController',
 			data: {
 				title: 'Detalles',
-				child: true
+				child: true,
+				funnkeControls: true
 			}
 		});
 }])
@@ -50,6 +51,7 @@ angular.module('Appster', [
 
 		$rootScope.viewTitle = toState.data.title;
 		$rootScope.isChildState = (toState.data.child) ? true : false;
+		$rootScope.hasFunnke = (toState.data.funnkeControls) ? true : false;
 
 	});
 }]);

@@ -7,14 +7,45 @@ body,
 h1, h2, h3, h4, h5 {
 	font-family: @fontFamily;
 }
+.has-navbar-bottom .app-body {
+	padding-bottom: 50px;
+}
+.has-funnke-controls {
+	.app-body {
+		padding-bottom: 74px;
+	}
+	.navbar-absolute-bottom {
+		height: 75px;
+		background: #FFEDE8;
+		border-top: 1px solid #F2C3B6;
+	}
+}
 .navbar-absolute-top {
 	background-color: @navbarBgColor;
 	border-bottom: @navBarBorder;
 }
 .navbar-absolute-bottom {
-	border: none;
+	.funnke-controls {
+		padding: 18px;
+
+		.btn {
+			.border-radius(4px);
+			background: @funnkeOrange;
+			border: 1px solid #D96443;
+			font-size: 14px;
+			color: white;
+			text-transform: none;
+			line-height: 35px;
+
+			i.fa {
+				margin-right: 6px;
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
 }
-.navbar-app .btn, .navbar-app .btn-navbar {
+.navbar-absolute-top .btn, .navbar-app .btn-navbar {
 	font-size: 20px;
 	padding-left: 18px;
 	padding-right: 18px;
@@ -36,6 +67,7 @@ h1, h2, h3, h4, h5 {
 		top: 1px;
 	}
 }
+
 .appster-app {
 	background-color: white;
 
@@ -61,6 +93,11 @@ h1, h2, h3, h4, h5 {
 	}
 	.a-body {
 		border-bottom: 1px solid @borderGrey;
+
+		h2 {
+			font-size: 16px;
+			line-height: 1.3;
+		}
 	}
 	.a-icon {
 		float: left;
@@ -115,6 +152,7 @@ h1, h2, h3, h4, h5 {
 		list-style: none;
 		padding: 0;
 		margin-bottom: 0;
+		.drop-shadow (0, 1px, 8px, 0, 0.10);
 
 		.appsweek-listitem {
 			a.appster-app {
@@ -122,6 +160,12 @@ h1, h2, h3, h4, h5 {
 				display: block;
 				padding: 18px;
 				border-top: 1px solid @borderGrey;
+
+				&:after {
+				  content: "";
+				  display: table;
+				  clear: both;
+				}
 
 				&:focus, &:active {
 					text-decoration: none;

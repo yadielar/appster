@@ -21,7 +21,7 @@
     <!-- Sidebars -->
     <div ng-include="'sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
 
-    <div class="app">
+    <div class="app" ng-class="{'has-funnke-controls': hasFunnke}">
 
       <!-- Navbars -->
       <div class="navbar navbar-app navbar-absolute-top">
@@ -43,7 +43,9 @@
       </div>
 
       <div class="navbar navbar-app navbar-absolute-bottom">
-        <div class="btn-group justified">
+        <div ng-show="hasFunnke" class="funnke-controls btn-group justified">
+          <a class="btn"><i class="fa fa-download"></i> Descargar</a>
+          <a class="btn"><i class="fa fa-share-alt"></i> Compartir</a>
         </div>
       </div>
       
