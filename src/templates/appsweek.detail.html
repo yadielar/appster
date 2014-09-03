@@ -1,4 +1,23 @@
-<section class="section container-fluid">
-  <h1 class="page-header">Detalles</h1>
-  <h2>{{app.title}}</h2>
+<!--section class="section container-fluid"></section-->
+<section class="scrollable">
+	<div class="appster-app scrollable-content">
+		<div class="a-head">
+			<img class="a-icon" ng-src="{{app.icon_72}}">
+			<div class="a-info">
+				<h1 class="a-name">{{app.title}}</h1>
+				<p class="a-dev">{{app.developer}}</p>
+				<div class="a-rating">
+					<span rateit="{{app.rating}}"></span>
+					<span class="a-rating-num"> ({{app.number_ratings | numberWithCommas}})</span>
+				</div>
+				<div class="a-price">{{app.price_numeric | renderPrice}}</div>
+			</div>
+		</div>
+		<div class="a-screenshots scrollable-custom">
+			<img ng-repeat="screenshot in app.screenshots" ng-src="{{screenshot}}">
+		</div>
+		<div class="a-body">
+			<p class="a-desc">{{app.description | trim}}</p>
+		</div>
+	</div>
 </section>

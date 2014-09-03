@@ -37,19 +37,47 @@ h1, h2, h3, h4, h5 {
 	}
 }
 .appster-app {
+	background-color: white;
+
 	.a-head,
 	.a-body {
 		padding: 18px;
+	}
+	.a-screenshots {
+		padding: 18px;
+		background: #F7F7F7;
+		white-space: nowrap;
+		overflow: auto;
+  		-webkit-overflow-scrolling: touch;
+		.inner-shadow(0, 0, 4px, 0px, 0.20);
+
+		img {
+			margin-left: 10px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.a-body {
+		border-bottom: 1px solid @borderGrey;
 	}
 	.a-icon {
 		float: left;
 		width: 72px;
 		height: 72px;
 	}
+	.a-dev {
+		font-size: 14px;
+		line-height: 1.3;
+		color: #808080;
+		margin-bottom: 12px;
+	}
 	.a-desc {
 		font-size: 12px;
 		line-height: 1.3;
-		color: #808080;
+		color: #505050;
+		white-space: pre-wrap;
 	}
 	.a-info {
 		margin-left: 90px;
@@ -93,7 +121,7 @@ h1, h2, h3, h4, h5 {
 				color: black;
 				display: block;
 				padding: 18px;
-				border-top: 1px solid #DCE2E6;
+				border-top: 1px solid @borderGrey;
 
 				&:focus, &:active {
 					text-decoration: none;
@@ -104,6 +132,8 @@ h1, h2, h3, h4, h5 {
 			.a-info {
 				.a-desc {
 					margin-bottom: 8px;
+					white-space: normal;
+					color: #808080;
 				}
 			}
 		}

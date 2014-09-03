@@ -47,4 +47,10 @@ angular.module('Appster.filters.AppsWeek', [])
 	    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	    return parts.join(".");
 	};
+}])
+
+.filter('trim', [function() {
+	return function(str) {
+	    return str.replace(/^\s+|\s+$/g, '');
+	};
 }]);
