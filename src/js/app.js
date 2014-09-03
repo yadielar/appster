@@ -19,7 +19,7 @@ angular.module('Appster', [
 		.state('appsweek', {
 			abstract: true,
 			url: '/apps-de-la-semana',
-			template: '<ui-view/>',
+			template: '<div ui-view class="appsweek" />',
 			resolve: {
 				query:  function($http){
 					return $http({method: 'GET', url: '/data/playmarketdata.json'});
