@@ -10,7 +10,7 @@
 						<p class="a-desc">{{app.description | truncate:true:108}}</p>
 						<div class="a-rating">
 							<span rateit="{{app.rating}}"></span>
-							<span class="a-rating-num"> ({{app.number_ratings}})</span>
+							<span class="a-rating-num"> ({{app.number_ratings | numberWithCommas}})</span>
 						</div>
 						<div class="a-price">{{app.price_numeric | renderPrice}}</div>
 					</div>
