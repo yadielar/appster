@@ -3,7 +3,7 @@
 		<div class="masthead"><img src="images/appster-logo@2x.png"></div>
 		<ul class="appsweek-list">
 			<li class="appsweek-listitem" ng-repeat="app in appsOfTheWeek">
-				<a ui-sref="appsweek.detail({ appId: $index })">
+				<a class="appster-app" ui-sref="appsweek.detail({ appId: $index })">
 					<img class="a-icon" ng-src="{{app.icon_72}}">
 					<div class="a-info">
 						<h1 class="a-name">{{app.title}}</h1>
