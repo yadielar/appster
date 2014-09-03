@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.min.css" />
     <link rel="stylesheet" href="css/responsive.min.css" />
     <!-- inject:js -->
@@ -28,11 +29,11 @@
         <div class="btn-group pull-left">
           <!-- Menu -->
           <div ng-hide="isChildState" ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
-            <i class="fa fa-bars"></i> Menu
+            <i class="fa fa-bars"></i>
           </div>
           <!-- Back Button -->
           <div ng-show="isChildState" ng-click="goBack()" class="btn btn-navbar">
-            <i class="fa fa-chevron-left"></i> Regresar
+            <i class="fa fa-chevron-left"></i>
           </div>
         </div>
         <div class="btn-group pull-right" yield-to="navbarAction">

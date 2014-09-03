@@ -1,3 +1,133 @@
 @import "mobile-angular-ui/src/less/mobile-angular-ui.less";
 @import "mixins.less";
 @import "variables.less";
+
+body,
+h1, h2, h3, h4, h5 {
+	font-family: @fontFamily;
+}
+.navbar-absolute-top {
+	background-color: @navbarBgColor;
+	border-bottom: @navBarBorder;
+}
+.navbar-absolute-bottom {
+	border: none;
+}
+.navbar-app .btn, .navbar-app .btn-navbar {
+	font-size: 20px;
+	padding-left: 18px;
+	padding-right: 18px;
+
+	i {
+		color: @navbarIconColor;
+		position: relative;
+		top: 1px;
+
+		&.fa-chevron-left{ top: 2px; }
+	}
+}
+.navbar-brand,
+.navbar-brand-center {
+	color: @navbarTextColor;
+
+	span {
+		position: relative;
+		top: 1px;
+	}
+}
+.appsweek-list-page {
+	.appsweek-list {
+		background-color: white;
+		list-style: none;
+		padding: 0;
+		margin-bottom: 0;
+
+		.appsweek-listitem {
+			a {
+				color: black;
+				display: block;
+				padding: 18px;
+				border-top: 1px solid #DCE2E6;
+
+				&:focus, &:active {
+					text-decoration: none;
+					opacity: 1;
+					.inner-shadow(0, 0, 10px, 0px, 0.10);
+				}
+			}
+			.a-icon {
+				float: left;
+				width: 72px;
+				height: 72px;
+			}
+			.a-info {
+				margin-left: 90px;
+				position: relative;
+
+				.a-name {
+					font-size: 18px;
+					margin-bottom: 8px;
+				}
+				.a-desc {
+					font-size: 12px;
+					line-height: 1.3;
+					color: #808080;
+					margin-bottom: 8px;
+				}
+				.a-rating {
+					font-size: 11px;
+					color: @funnkeOrange;
+				}
+				.a-price {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					font-size: 14px;
+					line-height: 1;
+					color: #59B300;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+/* Appsweek List Mastehead: Inline Image */
+/*
+.appsweek-list-page {
+	background-color: #D9F2FF;
+
+	.masthead {
+		height: 108px;
+		text-align: center;
+		position: relative;
+		z-index: 0;
+		background: url(../images/masthead-bg.png) no-repeat center center #D9F2FF;
+
+		img {
+			margin: 16px 0;
+			width: 173px;
+		}
+	}
+	.appsweek-list {
+		position: relative;
+		z-index: 100;
+	}
+}
+*/
+
+/* Appsweek List Mastehead: Background Image */
+.appsweek-list-page {
+	background-color: #D9F2FF;
+	background-image: url(../images/logo-shine@2x.png);
+	background-repeat: no-repeat;
+	background-position: center -60px;
+	.background-size(360px 225px);
+
+	.masthead {
+		display: none;
+	}
+	.appsweek-list {
+		margin-top: 108px;
+	}
+}

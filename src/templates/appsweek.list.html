@@ -1,8 +1,18 @@
-<section class="section container-fluid">
-  <h1 class="page-header">Welcome to Appster</h1>
-  <ul>
-  	<li ng-repeat="app in appsOfTheWeek">
-  		<a ui-sref="appsweek.detail({ appId: $index })">{{app.title}}</a>
-  	</li>
-  </ul>
+<section class="appsweek-list-page scrollable">
+	<div class="scrollable-content">
+		<div class="masthead"><img src="images/appster-logo@2x.png"></div>
+		<ul class="appsweek-list">
+			<li class="appsweek-listitem" ng-repeat="app in appsOfTheWeek">
+				<a ui-sref="appsweek.detail({ appId: $index })">
+					<img class="a-icon" ng-src="{{app.icon_72}}">
+					<div class="a-info">
+						<h1 class="a-name">{{app.title}}</h1>
+						<p class="a-desc">{{app.description | truncate:true:108}}</p>
+						<div class="a-rating">Rating: {{app.rating | toFixed}} ({{app.number_ratings}})</div>
+						<div class="a-price">{{app.price_numeric | renderPrice}}</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
 </section>
