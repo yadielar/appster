@@ -7,6 +7,48 @@ body,
 h1, h2, h3, h4, h5 {
 	font-family: @fontFamily;
 }
+
+.sidebar {
+	background-color: #444;
+
+	.app-name {
+		padding: 0 18px;
+	}
+	.scrollable-content {
+		background-color: #FFE3DB;
+	}
+	.list-group-item,
+	a.list-group-item {
+		padding: 15px 18px;
+		font-size: 15px;
+		border-color: #F2C3B6;
+	}
+	a.list-group-item.active,
+	a.list-group-item.active:focus {
+		background-color: @funnkeOrange;
+		border-color: @funnkeOrange;
+	}
+	.share-appster {
+		margin-top: 40px;
+		padding: 18px;
+
+		.btn {
+			.border-radius(4px);
+			background: #4862A3;
+			border: 1px solid #4862A3;
+			font-size: 14px;
+			color: white;
+			text-transform: none;
+			line-height: 35px;
+
+			i.fa {
+				margin-right: 6px;
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+}
 .app-body {
 	.transition (padding 0.25s ease-in);
 }
