@@ -23,7 +23,7 @@ angular.module('Appster', [
 			template: '<div ui-view class="appsweek" />',
 			resolve: {
 				query:  function($http){
-					return $http({method: 'GET', url: '/data/playmarketdata.json'});
+					return $http({method: 'GET', url: 'data/playmarketdata.json'});
 				}
 			}
 		})
