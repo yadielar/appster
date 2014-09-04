@@ -1,13 +1,14 @@
 angular.module('Appster', [
-	'ui.router',
-	'ngTouch',
-	'mobile-angular-ui',
 	'Appster.directives.Main',
 	'Appster.directives.AppsWeek',
 	'Appster.services.Main',
 	'Appster.filters.AppsWeek',
 	'Appster.controllers.Main',
-	'Appster.controllers.AppsWeek'
+	'Appster.controllers.AppsWeek',
+	'ui.router',
+	'ngAnimate',
+	'ngTouch',
+	'mobile-angular-ui'
 ])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	//
